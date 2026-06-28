@@ -1,0 +1,19 @@
+Port 5173 is in use, trying another one...
+
+  [32m[1mVITE[22m v6.4.3[39m  [2mready in [0m[1m618[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.137.1:[1m5174[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.132.83.72:[1m5174[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:39:10[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/SessionPage.tsx[22m
+[2m10:39:12[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/SessionPage.tsx[22m
+[2m10:40:03[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/SessionPage.tsx[22m
+[2m10:40:04[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/SessionPage.tsx[22m
+[2m10:53:16[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m10:53:16[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m10:53:16[22m [36m[1m[vite][22m[39m server restarted.
+[2m10:53:16[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m10:53:17[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m10:53:17[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m10:53:19[22m [36m[1m[vite][22m[39m server restarted.

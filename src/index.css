@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --waveward-deep: #1d4f86;
+  --waveward-mid: #6eaed4;
+  --waveward-soft: #dbeef8;
+  --waveward-paper: #f8fbfe;
+  --waveward-shadow: 0 24px 60px rgba(133, 183, 214, 0.2);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--waveward-deep);
+  background:
+    radial-gradient(circle at top left, rgba(206, 233, 248, 0.95), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(220, 239, 250, 0.72), transparent 26%),
+    linear-gradient(180deg, #f8fbfe 0%, #f4fafe 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.font-display {
+  font-family: "Nunito", "Comic Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.font-waveward-display {
+  font-family: "Noto Serif SC", "Songti SC", serif;
+}
+
+.font-waveward-serif {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+.waveward-paper-grain {
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 38%),
+    linear-gradient(45deg, rgba(173, 209, 231, 0.12), transparent 42%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(109, 171, 211, 0.028) 0,
+      rgba(109, 171, 211, 0.028) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+.waveward-cloud {
+  will-change: auto;
+}
+
+.waveward-fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: waveward-fade-up 0.9s ease-out forwards;
+}
+
+.waveward-button {
+  background:
+    linear-gradient(180deg, rgba(176, 224, 247, 0.92), rgba(107, 179, 227, 0.94)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+  box-shadow:
+    0 16px 34px rgba(116, 176, 216, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.waveward-button:hover {
+  box-shadow:
+    0 22px 38px rgba(116, 176, 216, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  filter: saturate(1.04);
+  transform: translateY(-2px);
+}
+
+.waveward-button:active {
+  transform: translateY(0);
+}
+
+.waveward-secondary-button {
+  border: 1px solid rgba(176, 214, 237, 0.95);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 12px 28px rgba(127, 181, 214, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.waveward-secondary-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(127, 198, 244, 0.95);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 16px 34px rgba(127, 181, 214, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.waveward-panel {
+  border: 1px solid rgba(214, 234, 246, 0.96);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(133, 183, 214, 0.12);
+}
+
+.waveward-panel-soft {
+  border: 1px solid rgba(222, 239, 248, 0.96);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 22px rgba(133, 183, 214, 0.08);
+}
+
+.waveward-input {
+  border: 1px solid rgba(215, 235, 246, 0.96);
+  background: rgba(255, 255, 255, 0.72);
+  color: #245f92;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.waveward-input::placeholder {
+  color: #a5c4d8;
+}
+
+.waveward-input:focus {
+  border-color: rgba(127, 198, 244, 0.96);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(127, 198, 244, 0.12);
+}
+
+.waveward-badge {
+  border: 1px solid rgba(212, 232, 244, 0.98);
+  background: rgba(255, 255, 255, 0.66);
+  color: #6d99b9;
+}
+
+::selection {
+  background: rgba(110, 174, 212, 0.22);
+}
+
+textarea {
+  font: inherit;
+}
+
+@keyframes waveward-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) scale(1.02);
+  }
+}
+
+@keyframes waveward-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "accounts": {
+    "1": {
+      "loginName": "1",
+      "selectedPetId": "moon-rabbit",
+      "profile": null,
+      "journeys": [],
+      "createdAt": "2026-06-23T02:56:48.352Z",
+      "updatedAt": "2026-06-23T04:07:39.840Z"
+    },
+    "旅人A": {
+      "loginName": "旅人A",
+      "selectedPetId": "cloud-tiger",
+      "profile": {
+        "nickname": "小海",
+        "recentHesitation": "要不要养一只猫",
+        "selfScene": "最近搬了新家，窗台一直空着",
+        "palette": "月白",
+        "item": "小花",
+        "aura": "像已经走了几步，只是还没来得及回头看",
+        "ocTitle": "拾光的人",
+        "ocDescription": "小海给人的第一感觉，是月白色的风轻轻落在肩头。最近搬了新家，窗台一直空着。手里握着一枚小花，像是在想着“要不要养一只猫”这件事究竟该放下还是带走。像已经走了几步，只是还没来得及回头看，而衔月安静地陪在一旁，替你守住还没说出口的那部分心事。"
+      },
+      "journeys": [
+        {
+          "id": "journey-1782181667706",
+          "sessionId": 1782181667706,
+          "date": "2026.6.23",
+          "topic": "要不要养一只猫",
+          "petId": "moon-rabbit",
+          "nickname": "小海",
+          "discourageScore": 50,
+          "verdict": "try-first",
+          "actionSuggestion": "先连着 3 天帮朋友照顾宠物或记录宠物开销，别急着把责任直接抱回家。",
+          "completed": true,
+          "reflection": "周末去猫咖待了一小时，发现自己其实挺享受，但回去清理猫毛这件事还是让我犹豫。",
+          "stageTitle": "第一道水纹出现",
+          "growthLine": "衔月身上浮出第一道细细的光纹，小海手里也多了一件和“要不要养一只猫”有关的小物件。原来成长真的会从一次试水开始。",
+          "answers": [
+            {
+              "questionId": "q1",
+              "dimension": "cost",
+              "title": "每月开销",
+              "prompt": "你能接受每月为它花多少钱？",
+              "value": "大概300元",
+              "trend": "rational",
+              "stance": "topic"
+            },
+            {
+              "questionId": "q2",
+              "dimension": "time",
+              "title": "陪伴时间",
+              "prompt": "你每天能陪它多久？",
+              "value": "看心情，有时候很忙",
+              "trend": "impulsive",
+              "stance": "alternative"
+            }
+          ],
+          "report": {
+            "topic": "要不要养一只猫",
+            "persona": "gentle",
+            "scenarioLabel": "养宠决定",
+            "discourageScore": 50,
+            "verdict": "try-first",
+            "summary": [
+              "你的想法介于热情和谨慎之间，适合用一个小范围试水来换取确定感。",
+              "目前你的关注点更集中在目标本身，记得同时给自己准备备用方案。",
+              "当前阻力值处于试水区间，关于“要不要养一只猫”适合先做一个低成本尝试。"
+            ],
+            "dimensionInsights": [
+              {
+                "dimension": "cost",
+                "title": "每月开销",
+                "stance": "topic",
+                "summary": "你在“每月开销”上的回答偏理性，并且更贴近目标。"
+              },
+              {
+                "dimension": "time",
+                "title": "陪伴时间",
+                "stance": "alternative",
+                "summary": "你在“陪伴时间”上的回答偏冲动，并且更在意替代方案。"
+              }
+            ],
+            "actionSuggestion": "先连着 3 天帮朋友照顾宠物或记录宠物开销，别急着把责任直接抱回家。"
+          },
+          "profileSnapshot": {
+            "nickname": "小海",
+            "recentHesitation": "要不要养一只猫",
+            "selfScene": "最近搬了新家，窗台一直空着",
+            "palette": "月白",
+            "item": "小花",
+            "aura": "像已经走了几步，只是还没来得及回头看",
+            "ocTitle": "拾光的人",
+            "ocDescription": "小海给人的第一感觉，是月白色的风轻轻落在肩头。最近搬了新家，窗台一直空着。手里握着一枚小花，像是在想着“要不要养一只猫”这件事究竟该放下还是带走。像已经走了几步，只是还没来得及回头看，而衔月安静地陪在一旁，替你守住还没说出口的那部分心事。"
+          }
+        }
+      ],
+      "createdAt": "2026-06-22T16:32:58.887Z",
+      "updatedAt": "2026-06-23T02:31:53.892Z"
+    },
+    "柏章艺": {
+      "loginName": "柏章艺",
+      "selectedPetId": "moon-rabbit",
+      "profile": null,
+      "journeys": [],
+      "createdAt": "2026-06-23T02:39:19.067Z",
+      "updatedAt": "2026-06-23T02:39:22.849Z"
+    }
+  },
+  "sessions": {
+    "1782181667706": {
+      "id": 1782181667706,
+      "loginName": "旅人A",
+      "topic": "要不要养一只猫",
+      "persona": "gentle",
+      "petId": "moon-rabbit",
+      "profileSnapshot": {
+        "nickname": "小海",
+        "recentHesitation": "要不要养一只猫",
+        "selfScene": "最近搬了新家，窗台一直空着",
+        "palette": "月白",
+        "item": "小花",
+        "aura": "像已经走了几步，只是还没来得及回头看",
+        "ocTitle": "拾光的人",
+        "ocDescription": "小海给人的第一感觉，是月白色的风轻轻落在肩头。最近搬了新家，窗台一直空着。手里握着一枚小花，像是在想着“要不要养一只猫”这件事究竟该放下还是带走。像已经走了几步，只是还没来得及回头看，而衔月安静地陪在一旁，替你守住还没说出口的那部分心事。"
+      },
+      "answers": [
+        {
+          "questionId": "q1",
+          "dimension": "cost",
+          "title": "每月开销",
+          "prompt": "你能接受每月为它花多少钱？",
+          "value": "大概300元",
+          "trend": "rational",
+          "stance": "topic"
+        },
+        {
+          "questionId": "q2",
+          "dimension": "time",
+          "title": "陪伴时间",
+          "prompt": "你每天能陪它多久？",
+          "value": "看心情，有时候很忙",
+          "trend": "impulsive",
+          "stance": "alternative"
+        }
+      ],
+      "createdAt": "2026-06-23T02:27:47.706Z",
+      "updatedAt": "2026-06-23T02:28:24.565Z"
+    }
+  }
+}
