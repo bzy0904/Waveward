@@ -117,13 +117,13 @@ export default function ReportPage() {
       <WavewardBottomWaves />
 
       <div className="relative mx-auto max-w-5xl space-y-5">
-        <section className="waveward-panel rounded-[32px] p-6">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div>
+        <section className="waveward-panel rounded-[28px] p-4 sm:rounded-[32px] sm:p-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between sm:gap-4">
+            <div className="min-w-0 flex-1">
               <p className="text-sm tracking-[0.08em] text-[#7ca5c2]">
                 {pet.emoji} {pet.name} 正在等这次最小尝试落地
               </p>
-              <h2 className="font-waveward-display text-4xl font-medium tracking-[0.04em] text-[#2a6598]">
+              <h2 className="font-waveward-display text-2xl font-medium tracking-[0.04em] text-[#2a6598] sm:text-4xl">
                 {currentJourney.completed
                   ? currentJourney.stageTitle
                   : getGrowthStageTitle(completedCount + 1)}
@@ -133,7 +133,7 @@ export default function ReportPage() {
             <button
               type="button"
               onClick={() => navigate("/journey")}
-              className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+              className="waveward-secondary-button inline-flex min-h-[44px] items-center justify-center gap-2 self-stretch rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2] sm:self-auto"
             >
               <BookOpenText className="h-4 w-4" />
               查看人生之书
@@ -165,7 +165,7 @@ export default function ReportPage() {
                 void handleCompleteJourney();
               }}
               disabled={currentJourney.completed || isSubmitting}
-              className="waveward-button mt-4 inline-flex items-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
+              className="waveward-button mt-4 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
             >
               <CheckCheck className="h-4 w-4" />
               {currentJourney.completed

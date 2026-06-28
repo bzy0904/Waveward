@@ -29,7 +29,7 @@ export function ProfileSetupCard({
   generatedProfile,
 }: ProfileSetupCardProps) {
   return (
-    <section className="waveward-panel space-y-5 rounded-[32px] p-6">
+    <section className="waveward-panel space-y-5 rounded-[24px] p-4 sm:rounded-[32px] sm:p-6">
       <div className="flex items-center gap-3 text-[#2b6aa2]">
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef7fd] ring-1 ring-[#d9eef8]">
           <Stars className="h-5 w-5" />
@@ -97,7 +97,7 @@ export function ProfileSetupCard({
         </label>
       </div>
 
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <p className="max-w-md text-sm leading-7 text-[#7ca5c2]">
           这份档案跟你的账号绑定，每完成一次涉浪都会自动更新。时间越久，它越珍贵。
         </p>
@@ -111,7 +111,7 @@ export function ProfileSetupCard({
             !potentialDirection.trim() ||
             disabled
           }
-          className="waveward-button inline-flex items-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
+          className="waveward-button inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           生成我的 OC 档案
           <ArrowRight className="h-4 w-4" />

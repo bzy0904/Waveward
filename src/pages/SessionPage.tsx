@@ -149,21 +149,21 @@ export default function SessionPage() {
       <WavewardBottomWaves />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-          <div>
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+          <div className="min-w-0 flex-1">
             <p className="text-sm tracking-[0.08em] text-[#7ca5c2]">🌊 {profile.nickname} 的陪伴空间</p>
-            <h1 className="font-waveward-display text-4xl font-medium tracking-[0.04em] text-[#2a6598]">
+            <h1 className="font-waveward-display text-2xl font-medium tracking-[0.04em] text-[#2a6598] sm:text-4xl">
               {topic}
             </h1>
             <p className="mt-2 text-sm leading-7 text-[#5f8fb2]">
               {pet.emoji} {pet.name} 正陪你把这件事慢慢看清楚。
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-2 sm:flex-wrap sm:gap-3">
             <button
               type="button"
               onClick={() => navigate("/home")}
-              className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+              className="waveward-secondary-button inline-flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2] sm:flex-none"
             >
               <House className="h-4 w-4" />
               回主页
@@ -174,7 +174,7 @@ export default function SessionPage() {
                 resetSession();
                 navigate("/home");
               }}
-              className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+              className="waveward-secondary-button inline-flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2] sm:flex-none"
             >
               <Undo2 className="h-4 w-4" />
               重新发起
@@ -182,7 +182,7 @@ export default function SessionPage() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-5 sm:gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <div className="rounded-[26px] border border-[#deeff8] bg-white/60 px-5 py-4 text-sm leading-7 text-[#5d8bae]">
               {statusLine}
@@ -318,7 +318,7 @@ export default function SessionPage() {
               <button
                 type="button"
                 onClick={() => setInteractionIndex((value) => value + 1)}
-                className="waveward-secondary-button mt-4 inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+                className="waveward-secondary-button mt-4 inline-flex min-h-[44px] items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
               >
                 <HandHeart className="h-4 w-4" />
                 摸摸 {pet.name}

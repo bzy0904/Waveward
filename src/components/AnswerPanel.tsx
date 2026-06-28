@@ -21,7 +21,7 @@ export function AnswerPanel({
   onSubmitCustom,
 }: AnswerPanelProps) {
   return (
-    <section className="waveward-panel rounded-[32px] p-6">
+    <section className="waveward-panel rounded-[24px] p-4 sm:rounded-[32px] sm:p-6">
       <div className="mb-4 flex items-center justify-between gap-3">
         <div>
           <h3 className="font-waveward-display text-2xl font-medium tracking-[0.04em] text-[#2a6598]">
@@ -42,7 +42,7 @@ export function AnswerPanel({
             type="button"
             onClick={() => onQuickReply(option)}
             disabled={disabled}
-            className="rounded-[24px] border border-[#d8edf8] bg-white/75 px-5 py-4 text-left text-[#4f80a4] transition hover:-translate-y-0.5 hover:border-[#8fcdf0] hover:bg-white hover:shadow-[0_12px_24px_rgba(116,176,216,0.12)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:border-[#d8edf8] disabled:hover:bg-white/75 disabled:hover:shadow-none"
+            className="min-h-[48px] rounded-[20px] border border-[#d8edf8] bg-white/75 px-4 py-3 text-left text-sm leading-6 text-[#4f80a4] transition hover:-translate-y-0.5 hover:border-[#8fcdf0] hover:bg-white hover:shadow-[0_12px_24px_rgba(116,176,216,0.12)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:border-[#d8edf8] disabled:hover:bg-white/75 disabled:hover:shadow-none sm:px-5 sm:py-4 sm:text-base sm:leading-7"
           >
             {option.label}
           </button>
@@ -62,7 +62,7 @@ export function AnswerPanel({
             type="button"
             onClick={onSubmitCustom}
             disabled={!customValue.trim() || disabled}
-            className="waveward-button inline-flex items-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
+            className="waveward-button inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
           >
             <SendHorizonal className="h-4 w-4" />
             提交这一轮回答

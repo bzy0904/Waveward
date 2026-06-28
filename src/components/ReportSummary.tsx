@@ -30,7 +30,7 @@ export function ReportSummary({ report, onRestart }: ReportSummaryProps) {
         <button
           type="button"
           onClick={onRestart}
-          className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+          className="waveward-secondary-button inline-flex min-h-[44px] items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
         >
           <RotateCcw className="h-4 w-4" />
           开始下一次尝试

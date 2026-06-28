@@ -132,17 +132,17 @@ export default function Home() {
       <WavewardWatercolorBackground />
       <WavewardBottomWaves />
 
-      <div className="relative mx-auto grid max-w-6xl gap-8 lg:ml-[max(0px,calc(25%_-_18rem))] lg:mr-auto lg:grid-cols-[0.95fr_1.05fr]">
-        <section className="waveward-panel flex flex-col justify-between rounded-[40px] p-7">
+      <div className="relative mx-auto grid max-w-6xl gap-6 px-1 sm:gap-8 sm:px-0 lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="waveward-panel flex flex-col justify-between rounded-[32px] p-5 sm:rounded-[40px] sm:p-7">
           <div>
             <div className="waveward-badge inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium tracking-[0.18em]">
               <Stars className="h-4 w-4" />
               WAVEWARD HOME
             </div>
 
-            <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <h1 className="font-waveward-display text-5xl font-medium leading-[1.1] tracking-[0.06em] text-[#1d4f86] sm:text-6xl">
+            <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between sm:gap-4">
+              <div className="min-w-0 flex-1">
+                <h1 className="font-waveward-display text-4xl font-medium leading-[1.1] tracking-[0.06em] text-[#1d4f86] sm:text-6xl">
                   欢迎回来
                 </h1>
                 <p className="mt-3 text-base tracking-[0.08em] text-[#6e9dbe]">
@@ -155,7 +155,7 @@ export default function Home() {
                   logout();
                   navigate("/login");
                 }}
-                className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+                className="waveward-secondary-button inline-flex min-h-[44px] items-center justify-center gap-2 self-stretch rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2] sm:self-auto"
               >
                 <LogOut className="h-4 w-4" />
                 退出登录
@@ -271,14 +271,14 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="mt-5 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <button
                     type="button"
                     onClick={() => {
                       void handleStart();
                     }}
                     disabled={!topic.trim() || busyAction !== ""}
-                    className="waveward-button inline-flex items-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
+                    className="waveward-button inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-5 py-3 font-waveward-display text-sm font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50 sm:flex-1"
                   >
                     {busyAction === "session" ? "正在出发..." : "开始新话题"}
                     <ArrowRight className="h-4 w-4" />
@@ -286,7 +286,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => navigate("/journey")}
-                    className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-[#5f8fb2]"
+                    className="waveward-secondary-button inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-[#5f8fb2] sm:flex-1"
                   >
                     <BookOpenText className="h-4 w-4" />
                     查看人生之书

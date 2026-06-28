@@ -40,12 +40,12 @@ export function CompanionSelector({ value, onChange }: CompanionSelectorProps) {
   };
 
   return (
-    <section className="waveward-panel rounded-[32px] p-6">
+    <section className="waveward-panel rounded-[24px] p-4 sm:rounded-[32px] sm:p-6">
       <div className="flex items-center gap-3 text-[#2b6aa2]">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef7fd] ring-1 ring-[#d9eef8]">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#eef7fd] ring-1 ring-[#d9eef8]">
           <Sparkles className="h-5 w-5" />
         </div>
-        <div>
+        <div className="min-w-0">
           <h2 className="font-waveward-display text-2xl font-medium tracking-[0.04em]">选一位陪你涉浪的伙伴</h2>
           <p className="text-sm leading-7 text-[#7ca5c2]">
             你不是在选人格，你是在选今天想要的对话温度。
@@ -54,8 +54,8 @@ export function CompanionSelector({ value, onChange }: CompanionSelectorProps) {
       </div>
 
       {/* 主展示卡片 */}
-      <div className="relative mt-5 overflow-hidden rounded-[28px] border border-[#8cc8ea] bg-[linear-gradient(180deg,rgba(132,197,236,0.96),rgba(84,155,209,0.96))] text-white shadow-[0_16px_32px_rgba(116,176,216,0.26)]">
-        <div className="flex items-start gap-4 px-6 py-6">
+      <div className="relative mt-5 overflow-hidden rounded-[24px] border border-[#8cc8ea] bg-[linear-gradient(180deg,rgba(132,197,236,0.96),rgba(84,155,209,0.96))] text-white shadow-[0_16px_32px_rgba(116,176,216,0.26)] sm:rounded-[28px]">
+        <div className="flex items-start gap-3 px-4 py-5 sm:gap-4 sm:px-6 sm:py-6">
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/18 text-4xl">
             {activePet.emoji}
           </div>

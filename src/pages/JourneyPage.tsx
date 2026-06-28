@@ -36,7 +36,7 @@ export default function JourneyPage() {
             <button
               type="button"
               onClick={() => navigate("/home")}
-              className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+              className="waveward-secondary-button inline-flex min-h-[44px] items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
             >
               <House className="h-4 w-4" />
               回主页
@@ -47,7 +47,7 @@ export default function JourneyPage() {
                 resetSession();
                 navigate("/home");
               }}
-              className="waveward-secondary-button inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
+              className="waveward-secondary-button inline-flex min-h-[44px] items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-[#5f8fb2]"
             >
               <Undo2 className="h-4 w-4" />
               清空当前记录

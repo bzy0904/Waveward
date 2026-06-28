@@ -18,7 +18,7 @@ export function TopicComposer({
   disabled = false,
 }: TopicComposerProps) {
   return (
-    <div className="waveward-panel rounded-[32px] p-6">
+    <div className="waveward-panel rounded-[24px] p-4 sm:rounded-[32px] sm:p-6">
       <div className="mb-4 flex items-center gap-3 text-[#2b6aa2]">
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef7fd] ring-1 ring-[#d9eef8]">
           <Sparkles className="h-5 w-5" />
@@ -59,7 +59,7 @@ export function TopicComposer({
         ))}
       </div>
 
-      <div className="mt-6 flex items-center justify-between gap-4">
+      <div className="mt-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-md text-sm leading-7 text-[#7ca5c2]">
           最后一定会给你一个今天就能做的最小尝试动作，不让你卡在“准备好了再开始”。
         </p>
@@ -67,7 +67,7 @@ export function TopicComposer({
           type="button"
           onClick={onSubmit}
           disabled={!value.trim() || disabled || pending}
-          className="waveward-button rounded-full px-6 py-3 font-waveward-display text-base font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
+          className="waveward-button inline-flex min-h-[48px] items-center justify-center rounded-full px-6 py-3 font-waveward-display text-base font-medium tracking-[0.08em] text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           {pending ? "正在出发..." : "开始新尝试"}
         </button>

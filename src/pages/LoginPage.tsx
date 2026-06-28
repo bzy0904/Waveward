@@ -158,7 +158,7 @@ export default function LoginPage() {
       <WavewardWatercolorBackground />
       <WavewardBottomWaves />
 
-      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-between px-4 pb-24 pt-8 sm:px-8 sm:pb-28 sm:pt-10">
+      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-between px-3 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
         <div className="flex w-full flex-1 flex-col items-center justify-center">
           <div className="waveward-fade-up inline-flex items-center gap-2 rounded-full border border-[#d8ebf6] bg-white/65 px-5 py-2 text-sm tracking-[0.18em] text-[#6f9abb] shadow-[0_12px_28px_rgba(140,184,212,0.14)] backdrop-blur-sm">
             <Sparkles className="h-4 w-4" strokeWidth={1.8} />
@@ -169,17 +169,17 @@ export default function LoginPage() {
             <WavewardWordmark brandCn={wavewardHero.brandCn} brandEn={wavewardHero.brandEn} />
           </div>
 
-          <section className="waveward-fade-up mt-14 max-w-3xl text-center" style={{ animationDelay: "120ms" }}>
-            <h2 className="font-waveward-display text-4xl font-medium leading-[1.45] tracking-[0.04em] text-[#1e4f89] sm:text-5xl">
+          <section className="waveward-fade-up mt-10 max-w-3xl px-2 text-center sm:mt-14" style={{ animationDelay: "120ms" }}>
+            <h2 className="font-waveward-display text-3xl font-medium leading-[1.45] tracking-[0.04em] text-[#1e4f89] sm:text-5xl">
               {wavewardHero.slogan}
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-7 tracking-[0.08em] text-[#8eb5cf] sm:text-base">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 tracking-[0.08em] text-[#8eb5cf] sm:mt-5 sm:text-base">
               {wavewardHero.caption}
             </p>
           </section>
 
           <section
-            className="waveward-fade-up mt-12 w-full max-w-xl rounded-[34px] border border-[#d6eaf6] bg-white/60 p-4 shadow-[0_26px_70px_rgba(135,184,214,0.18)] backdrop-blur-md sm:p-5"
+            className="waveward-fade-up mt-8 w-full max-w-xl rounded-[28px] border border-[#d6eaf6] bg-white/60 p-3 shadow-[0_26px_70px_rgba(135,184,214,0.18)] backdrop-blur-md sm:mt-12 sm:rounded-[34px] sm:p-5"
             style={{ animationDelay: "220ms" }}
           >
             <div className="flex gap-1 rounded-full bg-white/70 p-1 ring-1 ring-[#e2f0f8]">
@@ -215,14 +215,14 @@ export default function LoginPage() {
               </div>
             ) : (
               <div className="mt-4 space-y-3">
-                <label className="block rounded-[28px] bg-white/75 px-5 py-4 ring-1 ring-[#e2f0f8]">
+                <label className="block rounded-[24px] bg-white/75 px-4 py-3 ring-1 ring-[#e2f0f8] sm:rounded-[28px] sm:px-5 sm:py-4">
                   <span className="block text-xs tracking-[0.22em] text-[#7fa6c1]">账号</span>
                   <input
                     value={loginName}
                     onChange={(event) => setLoginName(event.target.value)}
                     autoComplete={mode === "login" ? "username" : "off"}
                     placeholder="2 个字符以上的账号名"
-                    className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-2xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-base placeholder:tracking-[0.08em] placeholder:text-[#b0c9da]"
+                    className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-sm placeholder:tracking-[0.08em] placeholder:text-[#b0c9da] sm:text-2xl sm:placeholder:text-base"
                     onKeyDown={(event) => {
                       if (event.key === "Enter") {
                         event.preventDefault();
@@ -232,7 +232,7 @@ export default function LoginPage() {
                   />
                 </label>
 
-                <label className="block rounded-[28px] bg-white/75 px-5 py-4 ring-1 ring-[#e2f0f8]">
+                <label className="block rounded-[24px] bg-white/75 px-4 py-3 ring-1 ring-[#e2f0f8] sm:rounded-[28px] sm:px-5 sm:py-4">
                   <span className="block text-xs tracking-[0.22em] text-[#7fa6c1]">密码</span>
                   <input
                     type="password"
@@ -240,7 +240,7 @@ export default function LoginPage() {
                     onChange={(event) => setPassword(event.target.value)}
                     autoComplete={mode === "login" ? "current-password" : "new-password"}
                     placeholder={mode === "login" ? "请输入密码" : "至少 4 个字符"}
-                    className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-2xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-base placeholder:tracking-[0.08em] placeholder:text-[#b0c9da]"
+                    className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-sm placeholder:tracking-[0.08em] placeholder:text-[#b0c9da] sm:text-2xl sm:placeholder:text-base"
                     onKeyDown={(event) => {
                       if (event.key === "Enter") {
                         event.preventDefault();
@@ -251,7 +251,7 @@ export default function LoginPage() {
                 </label>
 
                 {mode === "register" ? (
-                  <label className="block rounded-[28px] bg-white/75 px-5 py-4 ring-1 ring-[#e2f0f8]">
+                  <label className="block rounded-[24px] bg-white/75 px-4 py-3 ring-1 ring-[#e2f0f8] sm:rounded-[28px] sm:px-5 sm:py-4">
                     <span className="block text-xs tracking-[0.22em] text-[#7fa6c1]">确认密码</span>
                     <input
                       type="password"
@@ -259,7 +259,7 @@ export default function LoginPage() {
                       onChange={(event) => setConfirmPassword(event.target.value)}
                       autoComplete="new-password"
                       placeholder="再次输入密码"
-                      className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-2xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-base placeholder:tracking-[0.08em] placeholder:text-[#b0c9da]"
+                      className="mt-2 w-full border-none bg-transparent p-0 font-waveward-display text-xl text-[#2a6598] outline-none placeholder:font-sans placeholder:text-sm placeholder:tracking-[0.08em] placeholder:text-[#b0c9da] sm:text-2xl sm:placeholder:text-base"
                       onKeyDown={(event) => {
                         if (event.key === "Enter") {
                           event.preventDefault();
@@ -278,7 +278,7 @@ export default function LoginPage() {
                 void handleSubmit();
               }}
               disabled={isSubmitting}
-              className="waveward-button mt-4 inline-flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 font-waveward-display text-3xl font-medium tracking-[0.06em] text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="waveward-button mt-4 inline-flex min-h-[48px] w-full items-center justify-center gap-3 rounded-full px-6 py-4 font-waveward-display text-2xl font-medium tracking-[0.06em] text-white disabled:cursor-not-allowed disabled:opacity-60 sm:px-8 sm:text-3xl"
             >
               {isSubmitting ? "正在进入..." : submitLabel}
               <ArrowRight className="h-5 w-5" strokeWidth={2} />
