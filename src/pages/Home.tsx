@@ -132,8 +132,8 @@ export default function Home() {
       <WavewardWatercolorBackground />
       <WavewardBottomWaves />
 
-      <div className="relative mx-auto grid max-w-6xl gap-6 px-1 sm:gap-8 sm:px-0 lg:grid-cols-[0.95fr_1.05fr]">
-        <section className="waveward-panel flex flex-col justify-between rounded-[32px] p-5 sm:rounded-[40px] sm:p-7">
+      <div className="relative mx-auto grid max-w-7xl gap-6 px-1 sm:gap-8 sm:px-0 lg:grid-cols-[0.8fr_1.2fr]">
+        <section className="waveward-panel min-w-0 flex flex-col gap-6 rounded-[32px] p-5 sm:rounded-[40px] sm:p-7">
           <div>
             <div className="waveward-badge inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium tracking-[0.18em]">
               <Stars className="h-4 w-4" />
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8 space-y-4">
+          <div className="space-y-4">
             <div className="waveward-panel-soft rounded-[28px] p-5">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[linear-gradient(180deg,rgba(241,249,255,0.96),rgba(220,239,250,0.96))] text-xl ring-1 ring-[#d6ebf7]">
@@ -301,7 +301,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-5">
+        <section className="min-w-0 space-y-5">
           <CompanionSelector value={selectedPetId} onChange={handlePetChange} />
 
           {!profile && (
