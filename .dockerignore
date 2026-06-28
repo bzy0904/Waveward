@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.tools
+api/storage
+.git
+.gitignore
+*.md
+启动.bat
+.vscode
+.idea
