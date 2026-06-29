@@ -96,7 +96,7 @@ export const wavewardApi = {
     persona: PersonaType;
     petId: PetId;
   }) =>
-    request<{ session: BackendSession }>("/sessions", {
+    request<{ session: BackendSession; account: BackendAccount }>("/sessions", {
       method: "POST",
       body: JSON.stringify(payload),
     }),

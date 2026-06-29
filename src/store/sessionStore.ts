@@ -236,21 +236,24 @@ export const useSessionStore = create<SessionState>()(
       },
       startSession: async (topic) => {
         const state = get();
-        const { session } = await wavewardApi.createSession({
+        const { session, account } = await wavewardApi.createSession({
           loginName: state.loginName || fallbackLoginName,
           topic: topic.trim(),
           persona: companionPetMap[state.selectedPetId].basePersona,
           petId: state.selectedPetId,
         });
 
-        set({
+        set((current) => ({
           topic: session.topic,
           persona: session.persona,
           currentStep: session.answers.length,
           currentSessionId: session.id,
           answers: session.answers,
           currentReport: null,
-        });
+          profile: account.profile,
+          journeys: account.journeys,
+          accountArchives: syncAccountArchiveFromAccount(current.accountArchives, account),
+        }));
       },
       submitAnswer: async (
         questionId,

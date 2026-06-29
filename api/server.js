@@ -719,6 +719,7 @@ async function handleRequest(request, response) {
       sendJson(response, 201, {
         ok: true,
         session: repo.getSession(sessionId),
+        account: repo.getAccount(loginName),
       });
       return;
     }
