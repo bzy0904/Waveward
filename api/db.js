@@ -128,6 +128,7 @@ const stmts = {
   // journeys
   getJourney: db.prepare(`SELECT * FROM journeys WHERE id = ?`),
   getJourneysByAccount: db.prepare(`SELECT * FROM journeys WHERE loginName = ? ORDER BY rowid DESC`),
+  countSessionsByAccount: db.prepare(`SELECT COUNT(*) as cnt FROM sessions WHERE loginName = ?`),
   insertJourney: db.prepare(`
     INSERT INTO journeys (id, loginName, sessionId, date, topic, petId, nickname,
       discourageScore, verdict, actionSuggestion, completed, reflection,
@@ -211,11 +212,24 @@ function serializeAccount(loginName) {
   if (!accountRow) return null;
 
   const journeys = stmts.getJourneysByAccount.all(loginName).map(rowToJourney);
+  const profile = accountRow.profile ? JSON.parse(accountRow.profile) : null;
+
+  // 动态同步 profile 里的计数（避免 profile JSON 里的旧值过时）
+  // shelangCount = 发起的 session 总数；completedCount = 已完成 journey 数
+  if (profile) {
+    const sessionCount = stmts.countSessionsByAccount.get(loginName).cnt;
+    const completedCount = journeys.filter((j) => j.completed).length;
+    profile.shelangCount = sessionCount;
+    profile.completedCount = completedCount;
+    profile.completionRate = sessionCount > 0
+      ? Math.round((completedCount / sessionCount) * 100)
+      : 0;
+  }
 
   return {
     loginName: accountRow.loginName,
     selectedPetId: accountRow.selectedPetId,
-    profile: accountRow.profile ? JSON.parse(accountRow.profile) : null,
+    profile,
     journeys,
     hasPassword: Boolean(accountRow.password),
     updatedAt: accountRow.updatedAt,
